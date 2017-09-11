@@ -13,6 +13,6 @@ attr_reader :name
   end
 
   def display_balance
-    @balance
+    self.balance
   end
 end
