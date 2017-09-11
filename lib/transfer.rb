@@ -16,6 +16,7 @@ attr_accessor :sender, :receiver, :amount, :status
 
   def execute_transaction
     if valid? && self.status == "pending"
+      binding.pry
       self.receiver.deposit(amount)
       self.sender.deposit(-amount)
       self.status = "complete"
