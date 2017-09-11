@@ -27,7 +27,7 @@ attr_accessor :sender, :receiver, :amount, :status
 
   def reverse_transfer
     binding.pry
-    if self.status = "complete"
+    if self.status == "complete"
       self.sender.deposit(amount)
       self.receiver.deposit(-amount)
       self.status = "reversed"
