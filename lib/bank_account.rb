@@ -17,7 +17,8 @@ attr_reader :name, :balance
   end
 
   def valid?
-    self.status == "open" && @balance > 0
+    if self.status == "open" && @balance > 0
+    end
   end
 
   def close_account
