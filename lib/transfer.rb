@@ -11,7 +11,7 @@ attr_accessor :sender, :receiver, :amount, :status
   end
 
   def valid?
-    sender.status == "open" && receiver.status == "open"
+    sender.valid? && receiver.valid?
 
   end
 
