@@ -15,10 +15,10 @@ attr_accessor :sender, :receiver, :amount, :status
   end
 
   def execute_transaction
-    if valid?
+    if valid? && self.status == "pending"
       self.receiver.deposit(amount)
       self.sender.deposit(-amount)
-
+      self.status = "completed"
     else
       "Transaction rejected. Please check your account balance."
 
