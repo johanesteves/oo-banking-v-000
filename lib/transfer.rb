@@ -12,7 +12,14 @@ attr_accessor :sender, :receiver, :amount, :status
 
   def valid?
     sender.valid? && receiver.valid?
+  end
 
+  def execute_transaction
+    if valid?
+
+    else 
+      "Transaction rejected. Please check your account balance."
+    
   end
 
 
