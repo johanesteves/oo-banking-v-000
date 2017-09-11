@@ -31,6 +31,7 @@ attr_accessor :sender, :receiver, :amount, :status
       self.sender.deposit(amount)
       self.receiver.deposit(-amount)
       self.status = "reversed"
+      binding.pry
     end
   end
 
