@@ -19,7 +19,7 @@ attr_accessor :sender, :receiver, :amount, :status
       self.receiver.deposit(amount)
       self.sender.deposit(-amount)
       self.status = "complete"
-      binding.py
+      binding.pry
     else
       self.status = "rejected"
       "Transaction rejected. Please check your account balance."
